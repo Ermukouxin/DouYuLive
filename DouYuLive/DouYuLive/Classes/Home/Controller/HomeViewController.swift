@@ -13,23 +13,40 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        // 设置UI界面
+        setUI()
     }
+}
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+// MARK: - 设置UI界面
+extension HomeViewController {
+    private func setUI () {
+        // 1，设置导航栏
+        setNavigationBar()
     }
     
+    // MARK: 设置导航栏
+    private func setNavigationBar () {
+        // 设置左边logo图标
+        let size : CGSize = CGSize(width: 40, height: 40)
+        
+        // 使用类方法创建的UIBarButtonItem
+        
+        /*
+         navigationItem.leftBarButtonItem = UIBarButtonItem.createBarButtonItem(image: "logo", highImage: "logo", size: size)
+        let historyItem = UIBarButtonItem.createBarButtonItem(image: "image_my_history", highImage: "Image_my_history_click", size: size)
+        let searchItem  = UIBarButtonItem.createBarButtonItem(image: "btn_search", highImage: "btn_search_clicked", size: size)
+        let qrcodeItem = UIBarButtonItem.createBarButtonItem(image: "Image_scan", highImage: "Image_scan_click", size: size)
+        */
+        
+        // 使用类方法创建的UIBarButtonItem
+        
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: "logo", highImage: "", size: size)
+        let historyItem = UIBarButtonItem(image: "image_my_history", highImage: "Image_my_history_click", size: size)
+        let searchItem = UIBarButtonItem(image: "btn_search", highImage: "btn_search_clicked", size: size)
+        let qrcodeItem = UIBarButtonItem(image: "Image_scan", highImage: "Image_scan_click", size: size)
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        // 设置右边Items
+        navigationItem.rightBarButtonItems = [historyItem, searchItem, qrcodeItem]
     }
-    */
-
 }

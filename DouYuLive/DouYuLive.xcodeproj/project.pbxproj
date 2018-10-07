@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F3105ACF215E12DF0020DB8C /* UIBarButtonItem-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3105ACE215E12DF0020DB8C /* UIBarButtonItem-Extension.swift */; };
 		F38A16B3215D14D4009360F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38A16B2215D14D4009360F8 /* AppDelegate.swift */; };
 		F38A16B8215D14D4009360F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F38A16B6215D14D4009360F8 /* Main.storyboard */; };
 		F38A16BA215D14D4009360F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F38A16B9215D14D4009360F8 /* Assets.xcassets */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F3105ACE215E12DF0020DB8C /* UIBarButtonItem-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem-Extension.swift"; sourceTree = "<group>"; };
 		F38A16AF215D14D4009360F8 /* DouYuLive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DouYuLive.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F38A16B2215D14D4009360F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F38A16B7215D14D4009360F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -49,6 +51,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F3105ACC215E12720020DB8C /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				F3105ACE215E12DF0020DB8C /* UIBarButtonItem-Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		F38A16A6215D14D4009360F8 = {
 			isa = PBXGroup;
 			children = (
@@ -125,6 +135,7 @@
 		F38A16C9215D17A0009360F8 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				F3105ACC215E12720020DB8C /* Extension */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -341,6 +352,7 @@
 				F38A16E5215D1B4E009360F8 /* FollowViewController.swift in Sources */,
 				F38A16E1215D1B00009360F8 /* LiveViewController.swift in Sources */,
 				F38A16DF215D1AD2009360F8 /* HomeViewController.swift in Sources */,
+				F3105ACF215E12DF0020DB8C /* UIBarButtonItem-Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
