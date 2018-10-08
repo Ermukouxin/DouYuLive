@@ -22,6 +22,8 @@
 		F38A16EB215D1BA6009360F8 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F38A16EA215D1BA6009360F8 /* Profile.storyboard */; };
 		F3D260812169BF75008AD75F /* PageTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D260802169BF75008AD75F /* PageTitleView.swift */; };
 		F3D260832169C219008AD75F /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D260822169C219008AD75F /* Common.swift */; };
+		F3DC57E0216B48E6003F463D /* UIColor-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DC57DF216B48E6003F463D /* UIColor-Extension.swift */; };
+		F3F7499B216B144200691DE6 /* PageContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F7499A216B144200691DE6 /* PageContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,8 @@
 		F38A16EA215D1BA6009360F8 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		F3D260802169BF75008AD75F /* PageTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageTitleView.swift; sourceTree = "<group>"; };
 		F3D260822169C219008AD75F /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		F3DC57DF216B48E6003F463D /* UIColor-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor-Extension.swift"; sourceTree = "<group>"; };
+		F3F7499A216B144200691DE6 /* PageContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +63,7 @@
 			isa = PBXGroup;
 			children = (
 				F3105ACE215E12DF0020DB8C /* UIBarButtonItem-Extension.swift */,
+				F3DC57DF216B48E6003F463D /* UIColor-Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -274,6 +279,7 @@
 			isa = PBXGroup;
 			children = (
 				F3D260802169BF75008AD75F /* PageTitleView.swift */,
+				F3F7499A216B144200691DE6 /* PageContentView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -355,12 +361,14 @@
 				F3D260812169BF75008AD75F /* PageTitleView.swift in Sources */,
 				F38A16E9215D1B90009360F8 /* ProfileViewController.swift in Sources */,
 				F38A16B3215D14D4009360F8 /* AppDelegate.swift in Sources */,
+				F3F7499B216B144200691DE6 /* PageContentView.swift in Sources */,
 				F38A16DD215D1AA9009360F8 /* MainViewController.swift in Sources */,
 				F3D260832169C219008AD75F /* Common.swift in Sources */,
 				F38A16E5215D1B4E009360F8 /* FollowViewController.swift in Sources */,
 				F38A16E1215D1B00009360F8 /* LiveViewController.swift in Sources */,
 				F38A16DF215D1AD2009360F8 /* HomeViewController.swift in Sources */,
 				F3105ACF215E12DF0020DB8C /* UIBarButtonItem-Extension.swift in Sources */,
+				F3DC57E0216B48E6003F463D /* UIColor-Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
