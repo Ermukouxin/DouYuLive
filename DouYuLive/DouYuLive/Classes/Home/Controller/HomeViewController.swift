@@ -9,6 +9,7 @@
 import UIKit
 // MARK: - 常量的定义
 private let kTitleViewH : CGFloat = 40
+
 class HomeViewController: UIViewController {
 
     // MARK: - 懒加载属性
@@ -22,12 +23,13 @@ class HomeViewController: UIViewController {
     
     private lazy var pageContentView : PageContentView = { [weak self] in
         // 1,确定contentView的frame
-        let contentH = kScreenH - kStatusBarH - kNavigationBarH - kTitleViewH
-        let frame : CGRect = CGRect(x: 0, y: kScreenH - contentH, width: kScreenW, height: contentH)
+        let contentH = kScreenH - kStatusBarH - kNavigationBarH - kTabBarH - kTitleViewH
+        let frame : CGRect = CGRect(x: 0, y: kStatusBarH + kNavigationBarH + kTitleViewH , width: kScreenW, height: contentH)
        
         // 2,确定添加的子控制器
         var childVCs : [UIViewController] = [UIViewController]()
-        for _ in 0..<4 {
+        childVCs.append(RecommendViewController()) // 添加第一个子控制器
+        for _ in 0..<3 {
             let vc : UIViewController = UIViewController()
             vc.view.backgroundColor = UIColor(r: CGFloat(arc4random_uniform(255)), g: CGFloat(arc4random_uniform(255)), b: CGFloat(arc4random_uniform(255)))
             childVCs.append(vc)
@@ -64,7 +66,6 @@ extension HomeViewController {
         
     }
     
-    // MARK: 设置导航栏
     private func setNavigationBar () {
         // 设置左边logo图标
         let size : CGSize = CGSize(width: 40, height: 40)

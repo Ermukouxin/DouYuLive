@@ -154,7 +154,6 @@ extension PageTitleView {
 // MARK: - 对外暴露的方法
 extension PageTitleView {
     func setTitleViewWithScrollProgress(scrollProgress : CGFloat, sourceIndex : Int, targetIndex : Int) {
-        print("sourceIndex \(sourceIndex)", "targetIndex \(targetIndex)", "scrollProgress \(scrollProgress)")
         
         // 1,获取对应的label
         let sourceLabel = titleLabelsArray[sourceIndex]
