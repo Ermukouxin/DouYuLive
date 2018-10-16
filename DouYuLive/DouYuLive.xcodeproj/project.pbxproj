@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C9BB2924E20B91A9C24A92B8 /* Pods_DouYuLive.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08A18AAA6146BE8158983DFF /* Pods_DouYuLive.framework */; };
 		F3105ACF215E12DF0020DB8C /* UIBarButtonItem-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3105ACE215E12DF0020DB8C /* UIBarButtonItem-Extension.swift */; };
 		F38A16B3215D14D4009360F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38A16B2215D14D4009360F8 /* AppDelegate.swift */; };
 		F38A16B8215D14D4009360F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F38A16B6215D14D4009360F8 /* Main.storyboard */; };
@@ -20,6 +21,9 @@
 		F38A16E7215D1B59009360F8 /* Follow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F38A16E6215D1B59009360F8 /* Follow.storyboard */; };
 		F38A16E9215D1B90009360F8 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38A16E8215D1B90009360F8 /* ProfileViewController.swift */; };
 		F38A16EB215D1BA6009360F8 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F38A16EA215D1BA6009360F8 /* Profile.storyboard */; };
+		F3917D7A216F6C05004CC142 /* RecommendViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3917D79216F6C05004CC142 /* RecommendViewModel.swift */; };
+		F3917D7C216F7425004CC142 /* NSDate-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3917D7B216F7425004CC142 /* NSDate-Extension.swift */; };
+		F3917D7E216F7B0B004CC142 /* AnchorGroupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3917D7D216F7B0B004CC142 /* AnchorGroupModel.swift */; };
 		F3BBD53A216C9C3800E8E665 /* RecommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BBD539216C9C3800E8E665 /* RecommendViewController.swift */; };
 		F3BBD53D216CA9DF00E8E665 /* CollectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BBD53B216CA9DF00E8E665 /* CollectionHeaderView.swift */; };
 		F3BBD53E216CA9DF00E8E665 /* CollectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3BBD53C216CA9DF00E8E665 /* CollectionHeaderView.xib */; };
@@ -29,11 +33,16 @@
 		F3BBD546216CB41300E8E665 /* CollectionViewPrettyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3BBD544216CB41300E8E665 /* CollectionViewPrettyCell.xib */; };
 		F3D260812169BF75008AD75F /* PageTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D260802169BF75008AD75F /* PageTitleView.swift */; };
 		F3D260832169C219008AD75F /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D260822169C219008AD75F /* Common.swift */; };
+		F3D741DA2170383700CF675C /* AnchorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D741D92170383700CF675C /* AnchorModel.swift */; };
 		F3DC57E0216B48E6003F463D /* UIColor-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DC57DF216B48E6003F463D /* UIColor-Extension.swift */; };
 		F3F7499B216B144200691DE6 /* PageContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F7499A216B144200691DE6 /* PageContentView.swift */; };
+		F3F855B5216EF3B600CAB04E /* NetWorkTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F855B4216EF3B600CAB04E /* NetWorkTools.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		08A18AAA6146BE8158983DFF /* Pods_DouYuLive.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DouYuLive.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5819D6645633724A4FFC4AC7 /* Pods-DouYuLive.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DouYuLive.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DouYuLive/Pods-DouYuLive.debug.xcconfig"; sourceTree = "<group>"; };
+		9EAAFE3C080833C7D9644AAD /* Pods-DouYuLive.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DouYuLive.release.xcconfig"; path = "Pods/Target Support Files/Pods-DouYuLive/Pods-DouYuLive.release.xcconfig"; sourceTree = "<group>"; };
 		F3105ACE215E12DF0020DB8C /* UIBarButtonItem-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem-Extension.swift"; sourceTree = "<group>"; };
 		F38A16AF215D14D4009360F8 /* DouYuLive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DouYuLive.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F38A16B2215D14D4009360F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +58,9 @@
 		F38A16E6215D1B59009360F8 /* Follow.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Follow.storyboard; sourceTree = "<group>"; };
 		F38A16E8215D1B90009360F8 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		F38A16EA215D1BA6009360F8 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		F3917D79216F6C05004CC142 /* RecommendViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendViewModel.swift; sourceTree = "<group>"; };
+		F3917D7B216F7425004CC142 /* NSDate-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSDate-Extension.swift"; sourceTree = "<group>"; };
+		F3917D7D216F7B0B004CC142 /* AnchorGroupModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnchorGroupModel.swift; sourceTree = "<group>"; };
 		F3BBD539216C9C3800E8E665 /* RecommendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendViewController.swift; sourceTree = "<group>"; };
 		F3BBD53B216CA9DF00E8E665 /* CollectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionHeaderView.swift; sourceTree = "<group>"; };
 		F3BBD53C216CA9DF00E8E665 /* CollectionHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionHeaderView.xib; sourceTree = "<group>"; };
@@ -58,8 +70,10 @@
 		F3BBD544216CB41300E8E665 /* CollectionViewPrettyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewPrettyCell.xib; sourceTree = "<group>"; };
 		F3D260802169BF75008AD75F /* PageTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageTitleView.swift; sourceTree = "<group>"; };
 		F3D260822169C219008AD75F /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		F3D741D92170383700CF675C /* AnchorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnchorModel.swift; sourceTree = "<group>"; };
 		F3DC57DF216B48E6003F463D /* UIColor-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor-Extension.swift"; sourceTree = "<group>"; };
 		F3F7499A216B144200691DE6 /* PageContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageContentView.swift; sourceTree = "<group>"; };
+		F3F855B4216EF3B600CAB04E /* NetWorkTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetWorkTools.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,17 +81,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9BB2924E20B91A9C24A92B8 /* Pods_DouYuLive.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		29FCFE70C949F340F44787FB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5819D6645633724A4FFC4AC7 /* Pods-DouYuLive.debug.xcconfig */,
+				9EAAFE3C080833C7D9644AAD /* Pods-DouYuLive.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C14496B9296B39D72E133116 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				08A18AAA6146BE8158983DFF /* Pods_DouYuLive.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F3105ACC215E12720020DB8C /* Extension */ = {
 			isa = PBXGroup;
 			children = (
 				F3105ACE215E12DF0020DB8C /* UIBarButtonItem-Extension.swift */,
 				F3DC57DF216B48E6003F463D /* UIColor-Extension.swift */,
+				F3F855B4216EF3B600CAB04E /* NetWorkTools.swift */,
+				F3917D7B216F7425004CC142 /* NSDate-Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -87,6 +121,8 @@
 			children = (
 				F38A16B1215D14D4009360F8 /* DouYuLive */,
 				F38A16B0215D14D4009360F8 /* Products */,
+				29FCFE70C949F340F44787FB /* Pods */,
+				C14496B9296B39D72E133116 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,6 +161,7 @@
 		F38A16C5215D17A0009360F8 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				F3917D78216F6BD1004CC142 /* ViewModel */,
 				F38A16C6215D17A0009360F8 /* Controller */,
 				F38A16C7215D17A0009360F8 /* Model */,
 				F38A16C8215D17A0009360F8 /* View */,
@@ -288,6 +325,8 @@
 		F38A16D8215D17A0009360F8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F3917D7D216F7B0B004CC142 /* AnchorGroupModel.swift */,
+				F3D741D92170383700CF675C /* AnchorModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -305,6 +344,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		F3917D78216F6BD1004CC142 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F3917D79216F6C05004CC142 /* RecommendViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -312,9 +359,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F38A16C1215D14D4009360F8 /* Build configuration list for PBXNativeTarget "DouYuLive" */;
 			buildPhases = (
+				77CBB62FB52DC84CFE0D021F /* [CP] Check Pods Manifest.lock */,
 				F38A16AB215D14D4009360F8 /* Sources */,
 				F38A16AC215D14D4009360F8 /* Frameworks */,
 				F38A16AD215D14D4009360F8 /* Resources */,
+				7276C9326FF3F4A3D0BA14C8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -377,23 +426,69 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7276C9326FF3F4A3D0BA14C8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-DouYuLive/Pods-DouYuLive-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DouYuLive/Pods-DouYuLive-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		77CBB62FB52DC84CFE0D021F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DouYuLive-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F38A16AB215D14D4009360F8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				F3D260812169BF75008AD75F /* PageTitleView.swift in Sources */,
+				F3917D7E216F7B0B004CC142 /* AnchorGroupModel.swift in Sources */,
 				F38A16E9215D1B90009360F8 /* ProfileViewController.swift in Sources */,
+				F3917D7A216F6C05004CC142 /* RecommendViewModel.swift in Sources */,
 				F3BBD545216CB41300E8E665 /* CollectionViewPrettyCell.swift in Sources */,
 				F38A16B3215D14D4009360F8 /* AppDelegate.swift in Sources */,
 				F3F7499B216B144200691DE6 /* PageContentView.swift in Sources */,
 				F38A16DD215D1AA9009360F8 /* MainViewController.swift in Sources */,
 				F3BBD53A216C9C3800E8E665 /* RecommendViewController.swift in Sources */,
 				F3D260832169C219008AD75F /* Common.swift in Sources */,
+				F3F855B5216EF3B600CAB04E /* NetWorkTools.swift in Sources */,
+				F3917D7C216F7425004CC142 /* NSDate-Extension.swift in Sources */,
 				F3BBD541216CAF4100E8E665 /* CollectionViewNormalCell.swift in Sources */,
 				F3BBD53D216CA9DF00E8E665 /* CollectionHeaderView.swift in Sources */,
 				F38A16E5215D1B4E009360F8 /* FollowViewController.swift in Sources */,
 				F38A16E1215D1B00009360F8 /* LiveViewController.swift in Sources */,
+				F3D741DA2170383700CF675C /* AnchorModel.swift in Sources */,
 				F38A16DF215D1AD2009360F8 /* HomeViewController.swift in Sources */,
 				F3105ACF215E12DF0020DB8C /* UIBarButtonItem-Extension.swift in Sources */,
 				F3DC57E0216B48E6003F463D /* UIColor-Extension.swift in Sources */,
@@ -530,6 +625,7 @@
 		};
 		F38A16C2215D14D4009360F8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5819D6645633724A4FFC4AC7 /* Pods-DouYuLive.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -550,6 +646,7 @@
 		};
 		F38A16C3215D14D4009360F8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9EAAFE3C080833C7D9644AAD /* Pods-DouYuLive.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;

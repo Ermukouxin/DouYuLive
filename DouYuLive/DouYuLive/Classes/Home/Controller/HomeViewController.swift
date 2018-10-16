@@ -89,8 +89,7 @@ extension HomeViewController {
         // 设置右边Items
         navigationItem.rightBarButtonItems = [historyItem, searchItem, qrcodeItem]
     }
-    
-    
+
 }
 
 // MARK: - 遵守pageTitleViewDelegate
