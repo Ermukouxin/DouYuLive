@@ -15,6 +15,7 @@ private let kNormalItemH : CGFloat = kItemW * 3 / 4
 private let kPrettyItemH : CGFloat = kItemW * 4 / 3
 
 private let kHeaderH : CGFloat = 50
+private let kCycleViewH : CGFloat = kScreenW * 3 / 8
 
 private let kNormalCellID : String = "kNormalCellID"
 private let kPrettyCellID : String = "kPrettyCellID"
@@ -24,6 +25,11 @@ class RecommendViewController: UIViewController {
 
     // MARK: - 懒加载属性
     private lazy var recommendVM : RecommendViewModel = RecommendViewModel()
+    private lazy var recommendCycleView : RecommendCycleView = {
+        let cycleView = RecommendCycleView.recommendCycleView()
+        cycleView.frame = CGRect(x: 0, y: -kCycleViewH, width: kScreenW, height: kCycleViewH)
+        return cycleView
+    }()
     private lazy var collectionView : UICollectionView = { [weak self] in
         // 1.创建布局类
         let layout = UICollectionViewFlowLayout()
@@ -69,15 +75,28 @@ extension RecommendViewController {
         //1.添加collectionview
         view.addSubview(collectionView)
         
+        //2,添加录播图到collectionView上
+        collectionView.addSubview(recommendCycleView)
+        
+        //3,设置collectionView的inset，使得cycleView可以显示出来
+        // 这种设置方法，及时collectionView加了头部视图，还可以在头部视图上面加上其他的视图
+        collectionView.contentInset = UIEdgeInsetsMake(kCycleViewH, 0, 0, 0)
     }
 }
 
 // MARK: - 请求网络数据
 extension RecommendViewController {
     func loadData() {
+        // 1,请求推荐数据
         recommendVM.requestData {
             self.collectionView.reloadData()
         }
+        // 2,请求轮播图数据
+        recommendVM.retquetCycleData {
+            print("请求到数据了")
+            self.recommendCycleView.cycleModelArray = self.recommendVM.cycleModelArray
+        }
+        
     }
 }
 
@@ -88,21 +107,26 @@ extension RecommendViewController : UICollectionViewDataSource, UICollectionView
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if section == 0 {
-            return 8
-        } else {
-            return 4
-        }
+        let group = recommendVM.anchorGroupModelArray[section]
+        return group.anchorListModelArray.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        var cell : UICollectionViewCell!
+        //1,取出对应的anchorModel
+        let groupModel = recommendVM.anchorGroupModelArray[indexPath.section]
+        let anchorModel = groupModel.anchorListModelArray[indexPath.row]
+        
+        
+        //2,取出不同类型的cell
         if indexPath.section == 1 {
-            cell = collectionView.dequeueReusableCell(withReuseIdentifier: kPrettyCellID, for: indexPath)
+            let prettyCell = collectionView.dequeueReusableCell(withReuseIdentifier: kPrettyCellID, for: indexPath) as! CollectionViewPrettyCell
+            prettyCell.anchorModel = anchorModel
+            return prettyCell
         } else {
-            cell = collectionView.dequeueReusableCell(withReuseIdentifier: kNormalCellID, for: indexPath)
+            let normalCell = collectionView.dequeueReusableCell(withReuseIdentifier: kNormalCellID, for: indexPath) as! CollectionViewNormalCell
+            normalCell.anchorModel = anchorModel
+            return normalCell
         }
-        return cell
     }
     
     

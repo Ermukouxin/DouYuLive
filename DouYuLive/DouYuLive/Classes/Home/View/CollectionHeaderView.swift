@@ -18,6 +18,7 @@ class CollectionHeaderView: UICollectionReusableView {
     var anchorGroup : AnchorGroupModel? {
         didSet {
             tagLabel.text = anchorGroup?.tag_name
+            
             let iconURL = URL(string: (anchorGroup?.icon_url) ?? "")
             iconImageView.kf.setImage(with: iconURL, placeholder: UIImage(named: "home_header_normal"), options: nil, progressBlock: nil, completionHandler: nil)
         }

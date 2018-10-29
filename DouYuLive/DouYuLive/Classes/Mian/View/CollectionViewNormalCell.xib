@@ -41,36 +41,55 @@
                         </userDefinedRuntimeAttributes>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="打小就很牛" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hgC-9z-wsu">
-                        <rect key="frame" x="5" y="157.5" width="56.5" height="13.5"/>
+                        <rect key="frame" x="5" y="159.5" width="56.5" height="13.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                        <nil key="textColor"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="66666人在线" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YCa-EG-2I5">
-                        <rect key="frame" x="256.5" y="157.5" width="69.5" height="13.5"/>
+                    <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TRP-ls-K8q">
+                        <rect key="frame" x="256" y="156" width="70" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="Y59-ZT-jZQ"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="fCM-1Y-C7h"/>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="g5Y-Uf-IXK"/>
+                            <constraint firstAttribute="width" constant="70" id="prn-j4-Ck9"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                        <state key="normal" title="666人在线">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </state>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="3"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maksToBounds" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </button>
                 </subviews>
             </view>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="RUu-PR-EYj" secondAttribute="trailing" id="5ZG-Cc-iF5"/>
                 <constraint firstItem="RUu-PR-EYj" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="5ck-tK-WNp"/>
                 <constraint firstAttribute="bottom" secondItem="n0n-ff-rnk" secondAttribute="bottom" constant="10" id="874-In-H0L"/>
+                <constraint firstItem="TRP-ls-K8q" firstAttribute="trailing" secondItem="RUu-PR-EYj" secondAttribute="trailing" constant="-5" id="9fX-Z8-0yW"/>
                 <constraint firstItem="hgC-9z-wsu" firstAttribute="leading" secondItem="RUu-PR-EYj" secondAttribute="leading" constant="5" id="AIx-If-ibe"/>
                 <constraint firstAttribute="trailing" secondItem="V8W-MB-fDX" secondAttribute="trailing" constant="5" id="C2T-iu-lbj"/>
                 <constraint firstItem="n0n-ff-rnk" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Chv-Sk-t26"/>
-                <constraint firstItem="hgC-9z-wsu" firstAttribute="bottom" secondItem="RUu-PR-EYj" secondAttribute="bottom" constant="-5" id="Gew-G1-Mng"/>
+                <constraint firstItem="hgC-9z-wsu" firstAttribute="bottom" secondItem="RUu-PR-EYj" secondAttribute="bottom" constant="-3" id="Gew-G1-Mng"/>
                 <constraint firstItem="n0n-ff-rnk" firstAttribute="top" secondItem="RUu-PR-EYj" secondAttribute="bottom" constant="5" id="HZi-8k-Hmv"/>
-                <constraint firstItem="YCa-EG-2I5" firstAttribute="bottom" secondItem="RUu-PR-EYj" secondAttribute="bottom" constant="-5" id="QdZ-vk-YLP"/>
-                <constraint firstItem="YCa-EG-2I5" firstAttribute="trailing" secondItem="RUu-PR-EYj" secondAttribute="trailing" constant="-5" id="RsW-N9-mu8"/>
+                <constraint firstItem="TRP-ls-K8q" firstAttribute="bottom" secondItem="RUu-PR-EYj" secondAttribute="bottom" id="XEz-eK-c2t"/>
                 <constraint firstItem="V8W-MB-fDX" firstAttribute="leading" secondItem="n0n-ff-rnk" secondAttribute="trailing" constant="5" id="jtD-j4-om2"/>
                 <constraint firstItem="RUu-PR-EYj" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="n84-wU-daO"/>
                 <constraint firstItem="V8W-MB-fDX" firstAttribute="centerY" secondItem="n0n-ff-rnk" secondAttribute="centerY" id="rgT-xc-GD2"/>
             </constraints>
             <size key="customSize" width="331" height="205"/>
-            <point key="canvasLocation" x="-19.5" y="27.5"/>
+            <connections>
+                <outlet property="iconImageView" destination="RUu-PR-EYj" id="SLp-eZ-7u8"/>
+                <outlet property="nickNameLabel" destination="hgC-9z-wsu" id="NIp-VH-ZEU"/>
+                <outlet property="onlineButton" destination="TRP-ls-K8q" id="1kx-wB-RVH"/>
+                <outlet property="roomNameLabel" destination="V8W-MB-fDX" id="uKX-KM-gSb"/>
+            </connections>
+            <point key="canvasLocation" x="-108" y="43"/>
         </collectionViewCell>
     </objects>
     <resources>

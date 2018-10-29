@@ -11,6 +11,7 @@ import UIKit
 class RecommendViewModel {
     // MARK: - 懒加载属性
     lazy var anchorGroupModelArray : [AnchorGroupModel] = [AnchorGroupModel]()
+    lazy var cycleModelArray : [CycleModel] = [CycleModel]()
     private lazy var prettyGroupModel : AnchorGroupModel = AnchorGroupModel()
     private lazy var recommendGroupModel : AnchorGroupModel = AnchorGroupModel()
 }
@@ -118,9 +119,23 @@ extension RecommendViewModel {
             self.anchorGroupModelArray.insert(self.prettyGroupModel, at: 0)
             self.anchorGroupModelArray.insert(self.recommendGroupModel, at: 0)
             
+            // 触发时间，告诉外面数据请求完了，回调出去
             finishCallBack()
         }
     }
     
-    
+    // 请求轮播图数据
+    // http://www.douyutv.com/api/v1/slide/6?version=2.300
+    func retquetCycleData(finishCallBack : @escaping ()->()) {
+        NetWorkTools.requestData(URLString: "http://www.douyutv.com/api/v1/slide/6", requestType: .GET, parameters: ["version" : "2.300"]) { (result) in
+            guard let resutDict = result as? [String : Any] else { return }
+            guard let resultArray = resutDict["data"] as? [[String : Any]] else { return }
+            
+            for dict in resultArray {
+                 self.cycleModelArray.append(CycleModel(dict: dict))
+            }
+            finishCallBack()
+        }
+    }
+
 }
