@@ -16,6 +16,7 @@ private let kPrettyItemH : CGFloat = kItemW * 4 / 3
 
 private let kHeaderH : CGFloat = 50
 private let kCycleViewH : CGFloat = kScreenW * 3 / 8
+private let kGameViewH : CGFloat = 90
 
 private let kNormalCellID : String = "kNormalCellID"
 private let kPrettyCellID : String = "kPrettyCellID"
@@ -27,8 +28,13 @@ class RecommendViewController: UIViewController {
     private lazy var recommendVM : RecommendViewModel = RecommendViewModel()
     private lazy var recommendCycleView : RecommendCycleView = {
         let cycleView = RecommendCycleView.recommendCycleView()
-        cycleView.frame = CGRect(x: 0, y: -kCycleViewH, width: kScreenW, height: kCycleViewH)
+        cycleView.frame = CGRect(x: 0, y: -(kCycleViewH + kGameViewH), width: kScreenW, height: kCycleViewH)
         return cycleView
+    }()
+    private lazy var recommendGameView : RecommendGameView = {
+        let gameView = RecommendGameView.gameView()
+        gameView.frame = CGRect(x: 0, y: -kGameViewH, width: kScreenW, height: kGameViewH)
+        return gameView
     }()
     private lazy var collectionView : UICollectionView = { [weak self] in
         // 1.创建布局类
@@ -78,9 +84,12 @@ extension RecommendViewController {
         //2,添加录播图到collectionView上
         collectionView.addSubview(recommendCycleView)
         
-        //3,设置collectionView的inset，使得cycleView可以显示出来
+        //3,添加gameView
+        collectionView.addSubview(recommendGameView)
+        
+        //4,设置collectionView的inset，使得cycleView可以显示出来
         // 这种设置方法，及时collectionView加了头部视图，还可以在头部视图上面加上其他的视图
-        collectionView.contentInset = UIEdgeInsetsMake(kCycleViewH, 0, 0, 0)
+        collectionView.contentInset = UIEdgeInsetsMake(kCycleViewH + kGameViewH, 0, 0, 0)
     }
 }
 
@@ -89,7 +98,10 @@ extension RecommendViewController {
     func loadData() {
         // 1,请求推荐数据
         recommendVM.requestData {
+            // a,刷新表格
             self.collectionView.reloadData()
+            // b,将数据传给gameView
+            self.recommendGameView.anchorGroupModelArray = self.recommendVM.anchorGroupModelArray
         }
         // 2,请求轮播图数据
         recommendVM.retquetCycleData {
